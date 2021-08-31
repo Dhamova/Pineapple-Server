@@ -1,1 +1,1 @@
-require('./functions.js')
+require('./sample-functions.js')
