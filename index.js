@@ -40,9 +40,6 @@ httpServer.listen(port, function () {
   console.log('Pineapple Server running on port ' + port + '.')
 })
 
-// This will enable the Live Query real-time server
-ParseServer.createLiveQueryServer(httpServer)
-
 module.exports = {
   app,
   config,
