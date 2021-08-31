@@ -23,6 +23,7 @@ const api = new ParseServer(config)
 app.use('/parse', api)
 
 var dashboard = new ParseDashboard({
+  "allowInsecureHTTP": true,
 	"apps": [
     {
       "serverURL": config.serverURL,
@@ -31,7 +32,7 @@ var dashboard = new ParseDashboard({
       "appName": "Pineapple App"
     }
   ]
-}, { allowInsecureHTTP: false })
+}, { allowInsecureHTTP: true })
 app.use('/dashboard', dashboard)
 
 const port = process.env.PORT || 1337
