@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/PineappleBuild/Server/issues"
   },
-  "homepage": "https://github.com/PineappleBuild/Server#readme"
+  "homepage": "https://github.com/PineappleBuild/Server#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "parse": "^3.3.0",
+    "parse-server": "^4.10.2"
+  }
 }
