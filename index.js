@@ -3,7 +3,7 @@ const ParseServer = require('parse-server').ParseServer
 const ParseDashboard = require('parse-dashboard')
 const path = require('path')
 
-const databaseUri = process.env.DATABASE_URI || process.env.MONGODB_URI
+const databaseUri = process.env.DATABASE_URI || process.env.MONGODB_URI || process.env.DATABASE
 if (!databaseUri) {
   console.log('DATABASE_URI not specified, falling back to localhost.')
 }
