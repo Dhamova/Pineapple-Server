@@ -4,6 +4,7 @@
   "description": "Power your Pineapple Apps with this server powered by Heroku + Parse.",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
