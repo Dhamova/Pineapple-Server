@@ -1,0 +1,50 @@
+{
+  "name": "Pineapple Server",
+  "description": "This is a simple Parse server than can be used with your app created on Pineapple.",
+  "keywords": [
+    "Pineapple",
+    "Parse",
+    "NoCode"
+  ],
+  "repository": "https://github.com/PineappleBuild/Server.git",
+  "success_url": "/dashboard",
+  "env": {
+    "SERVER_URL": {
+      "description": "The number of processes to run.",
+      "value": "https://{app_name}.herokuapp.com"
+    },
+    "APP_ID": {
+      "description": "A secret key for verifying the integrity of signed cookies.",
+      "generator": "secret"
+    },
+    "MASTER_KEY": {
+      "description": "The number of processes to run.",
+      "generator": "secret"
+    },
+    "MASTER_USERNAME": {
+      "description": "DON'T SHARE. Master username to login to the server.",
+      "value": "admin"
+    },
+    "MASTER_PASSWORD": {
+      "description": "DON'T SHARE. Master password to login to the server.",
+      "generator": "secret"
+    },
+    "NODE_TLS_REJECT_UNAUTHORIZED": {
+      "description": "Do not modify!",
+      "value": "0"
+    },
+    "PGSSLMODE": {
+      "description": "Do not modify!",
+      "value": "require"
+    }
+  },
+  "image": "heroku/nodejs",
+  "addons": [
+    {
+      "plan": "heroku-postgresql",
+      "options": {
+        "version": "13.4"
+      }
+    }
+  ]
+}

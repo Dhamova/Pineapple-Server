@@ -20,7 +20,7 @@ const app = express()
 app.use('/public', express.static(path.join(__dirname, '/public')))
 
 const api = new ParseServer(config)
-app.use('/parse', api)
+app.use('/', api)
 
 var dashboard = new ParseDashboard({
   "allowInsecureHTTP": true,
@@ -32,7 +32,6 @@ var dashboard = new ParseDashboard({
       "appName": "Pineapple App"
     }
   ],
-  "trustProxy": 1,
   "users": [
     {
       "user": process.env.MASTER_USERNAME || 'admin',
