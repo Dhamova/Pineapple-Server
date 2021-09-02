@@ -31,6 +31,13 @@ var dashboard = new ParseDashboard({
       "masterKey": config.masterKey,
       "appName": "Pineapple App"
     }
+  ],
+  "trustProxy": 1,
+  "users": [
+    {
+      "user": process.env.MASTER_USERNAME || 'admin',
+      "pass": process.env.MASTER_PASSWORD || 'pineapple'
+    }
   ]
 }, { allowInsecureHTTP: true })
 app.use('/dashboard', dashboard)
